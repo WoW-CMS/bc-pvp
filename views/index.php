@@ -38,7 +38,7 @@
                   </div>
                   <div class="uk-card-body uk-padding-remove">
                     <div class="uk-overflow-auto">
-                      <table class="uk-table uk-table-small uk-table-divider">
+                      <table class="uk-table uk-table-middle uk-table-divider uk-table-small">
                         <tbody>
                           <?php foreach ($this->pvp_model->top_teams($realm->id) as $t => $team): ?>
                           <tr>
@@ -47,7 +47,7 @@
                               <h5 class="uk-h5 uk-text-bold uk-margin-remove"><?= $team->name ?></h5>
                               <p class="uk-text-small uk-margin-remove-top uk-margin-small-bottom"><?= $team->rating ?> <?= lang('rating') ?></p>
                               <?php foreach ($this->pvp_model->team_members($realm->id, $team->arenateamid) as $member): ?>
-                              <img class="uk-border-circle" src="<?= $template['assets'].'img/icons/class/'.$member->class.'.png' ?>" width="20" height="20" alt="Class" uk-tooltip="<?=  $member->name ?>">
+                              <img class="uk-border-circle" src="<?= $template['assets'].'img/icons/class/'.$member->class.'.png' ?>" width="20" height="20" alt="<?= class_name($member->class) ?>" uk-tooltip="<?=  $member->name ?>">
                               <?php endforeach ?>
                             </td>
                           </tr>
@@ -65,7 +65,7 @@
                   </div>
                   <div class="uk-card-body uk-padding-remove">
                     <div class="uk-overflow-auto">
-                      <table class="uk-table uk-table-small uk-table-divider">
+                      <table class="uk-table uk-table-middle uk-table-divider uk-table-small">
                         <tbody>
                           <?php foreach ($this->pvp_model->top_teams($realm->id, 3) as $t => $team): ?>
                           <tr>
@@ -74,7 +74,7 @@
                               <h5 class="uk-h5 uk-text-bold uk-margin-remove"><?= $team->name ?></h5>
                               <p class="uk-text-small uk-margin-remove-top uk-margin-small-bottom"><?= $team->rating ?> <?= lang('rating') ?></p>
                               <?php foreach ($this->pvp_model->team_members($realm->id, $team->arenateamid) as $member): ?>
-                              <img class="uk-border-circle" src="<?= $template['assets'].'img/icons/class/'.$member->class.'.png' ?>" width="20" height="20" alt="Class" uk-tooltip="<?= $member->name ?>">
+                              <img class="uk-border-circle" src="<?= $template['assets'].'img/icons/class/'.$member->class.'.png' ?>" width="20" height="20" alt="<?= class_name($member->class) ?>" uk-tooltip="<?= $member->name ?>">
                               <?php endforeach ?>
                             </td>
                           </tr>
@@ -92,7 +92,7 @@
                   </div>
                   <div class="uk-card-body uk-padding-remove">
                     <div class="uk-overflow-auto">
-                      <table class="uk-table uk-table-small uk-table-divider">
+                      <table class="uk-table uk-table-middle uk-table-divider uk-table-small">
                         <tbody>
                           <?php foreach ($this->pvp_model->top_teams($realm->id, 5) as $t => $team): ?>
                           <tr>
@@ -101,7 +101,7 @@
                               <h5 class="uk-h5 uk-text-bold uk-margin-remove"><?= $team->name ?></h5>
                               <p class="uk-text-small uk-margin-remove-top uk-margin-small-bottom"><?= $team->rating ?> <?= lang('rating') ?></p>
                               <?php foreach ($this->pvp_model->team_members($realm->id, $team->arenateamid) as $member): ?>
-                              <img class="uk-border-circle" src="<?= $template['assets'].'img/icons/class/'.$member->class.'.png' ?>" width="20" height="20" alt="Class" uk-tooltip="<?= $member->name ?>">
+                              <img class="uk-border-circle" src="<?= $template['assets'].'img/icons/class/'.$member->class.'.png' ?>" width="20" height="20" alt="<?= class_name($member->class) ?>" uk-tooltip="<?= $member->name ?>">
                               <?php endforeach ?>
                             </td>
                           </tr>
@@ -117,7 +117,7 @@
             <div class="uk-card uk-card-default">
               <div class="uk-card-body uk-padding-remove">
                 <div class="uk-overflow-auto">
-                  <table class="uk-table uk-table-small uk-table-divider">
+                  <table class="uk-table uk-table-middle uk-table-divider uk-table-small">
                     <thead>
                       <tr>
                         <th class="uk-width-small"><?= lang('rank') ?></th>
